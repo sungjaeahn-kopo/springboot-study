@@ -7,9 +7,24 @@ import com.study.spring_study.repository.MemoryMemberRepository;
 import java.util.List;
 import java.util.Optional;
 
+/**
+ * MemberService 회원 관련 서비스
+ * 회원 서비스 테스트 클래스 자동 생성 단축키
+ * Ctrl + shift + t
+ */
 public class MemberService {
 
-    private final MemberRepository memberRepository = new MemoryMemberRepository();
+    // 테스트 케이스에서 해당 객체를 사용할 경우, 중복 구문이 발생함!
+    // private final MemberRepository memberRepository = new MemoryMemberRepository();
+    
+    // 외부에서 respository를 넣어주도록 변경
+    private final MemberRepository memberRepository;
+
+    public MemberService(MemberRepository memberRepository) {
+        this.memberRepository = memberRepository;
+    }
+
+
 
     /**
      * 회원가입
