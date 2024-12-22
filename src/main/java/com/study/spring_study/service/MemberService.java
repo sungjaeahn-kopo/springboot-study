@@ -3,6 +3,8 @@ package com.study.spring_study.service;
 import com.study.spring_study.domain.Member;
 import com.study.spring_study.repository.MemberRepository;
 import com.study.spring_study.repository.MemoryMemberRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
@@ -12,6 +14,8 @@ import java.util.Optional;
  * 회원 서비스 테스트 클래스 자동 생성 단축키
  * Ctrl + shift + t
  */
+
+@Service
 public class MemberService {
 
     // 테스트 케이스에서 해당 객체를 사용할 경우, 중복 구문이 발생함!
@@ -20,6 +24,7 @@ public class MemberService {
     // 외부에서 respository를 넣어주도록 변경
     private final MemberRepository memberRepository;
 
+    @Autowired
     public MemberService(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
     }
