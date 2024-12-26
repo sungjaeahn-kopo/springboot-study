@@ -15,7 +15,6 @@ import java.util.Optional;
  * Ctrl + shift + t
  */
 
-@Service
 public class MemberService {
 
     // 테스트 케이스에서 해당 객체를 사용할 경우, 중복 구문이 발생함!
@@ -24,7 +23,6 @@ public class MemberService {
     // 외부에서 respository를 넣어주도록 변경
     private final MemberRepository memberRepository;
 
-    @Autowired
     public MemberService(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
     }
