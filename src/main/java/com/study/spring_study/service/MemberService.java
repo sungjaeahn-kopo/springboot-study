@@ -5,6 +5,7 @@ import com.study.spring_study.repository.MemberRepository;
 import com.study.spring_study.repository.MemoryMemberRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
@@ -15,6 +16,7 @@ import java.util.Optional;
  * Ctrl + shift + t
  */
 
+@Transactional
 public class MemberService {
 
     // 테스트 케이스에서 해당 객체를 사용할 경우, 중복 구문이 발생함!
